@@ -1,0 +1,62 @@
+﻿Checks:
+    '-*,
+    bugprone-*,
+    -bugprone-macro-parentheses,
+    -bugprone-easily-swappable-parameters,
+    -bugprone-reserved-identifier,
+    -bugprone-implicit-widening-of-multiplication-result,
+
+    cert-dcl21-cpp,
+    cert-dcl50-cpp,
+    cert-env33-c,
+    cert-err34-c,
+    cert-err52-cpp,
+    cert-err60-cpp,
+    cert-flp30-c,
+    # cert-msc50-cpp,
+    # cert-msc51-cpp,
+
+    cppcoreguidelines-*,
+    -cppcoreguidelines-macro-usage,
+    -cppcoreguidelines-pro-type-reinterpret-cast,
+    -cppcoreguidelines-pro-type-union-access,
+    -cppcoreguidelines-pro-bounds-pointer-arithmetic,
+    -cppcoreguidelines-pro-type-vararg,
+    -cppcoreguidelines-avoid-magic-numbers,
+    -cppcoreguidelines-avoid-non-const-global-variables,
+    -cppcoreguidelines-init-variables,
+
+    google-build-using-namespace,
+    google-explicit-constructor,
+    google-global-names-in-headers,
+    google-readability-casting,
+    google-runtime-int,
+    google-runtime-operator,
+
+    hicpp-*,
+    -hicpp-vararg,
+    -hicpp-uppercase-literal-suffix,
+    -hicpp-braces-around-statements,
+    -hicpp-signed-bitwise,
+
+    misc-*,
+    -misc-misplaced-const,
+
+    modernize-*,
+    performance-*,
+
+    readability-*,
+    -readability-avoid-const-params-in-decls,
+    -readability-identifier-length,
+    -readability-uppercase-literal-suffix,
+    -readability-magic-numbers,
+    -readability-suspicious-call-argument,
+    -readability-braces-around-statements'
+
+CheckOptions:
+    - key: bugprone-argument-comment.StrictMode
+      value: 1
+    - key: bugprone-exception-escape.FunctionsThatShouldNotThrow
+      value: WinMain,SDL_main
+    - key: misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic
+      value: 1
